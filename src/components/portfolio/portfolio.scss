@@ -1,0 +1,110 @@
+@import "../../global.scss";
+
+.portfolio {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: 50px;
+        overflow: hidden;
+
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+    
+    ul{
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        overflow: hidden;
+
+        @include mobile{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li{
+            font-size: 14px;
+            margin-right: 50px;
+            padding: 7px;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+
+            @include mobile{
+                font-size: 12px;
+                margin-right: 5px;
+                padding: 7px;
+            }
+            &.active{
+                background-color: $mainColor;
+                color: white;
+            }
+        }
+    }
+    .container{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+        @include mobile{
+            width: 100%;
+            margin: 0;
+        }
+
+        a{
+            width: 275px;
+            height: 187.5px;
+            border-radius: 20px;
+            border: 1px solid lightgrey;
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            transition: all .5s ease;
+            cursor: pointer;
+            overflow: hidden;
+
+            @include mobile{
+                margin: 10px;
+                width: 125px;
+                height: 100px;
+            }
+
+            h3{
+                position: absolute;
+                font-size: 20px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+            }
+            &:hover{
+                background-color: $mainColor;
+                img{
+                    -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
+                    width: 125%;
+                    height: 125%;
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
