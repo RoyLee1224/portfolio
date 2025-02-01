@@ -46,7 +46,7 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
             target="_blank"
           >
             <LinkedInIcon className="icon" />
-            <span>Roy Lee</span>
+            <span>Roy Li</span>
           </a>
         </div>
         <div className="right">
